@@ -6,8 +6,9 @@ import java.util.ArrayList;
 
 public class Grid {
     private char empty = 'o';
-    ArrayList<ArrayList<Character>> grid = new ArrayList<>();
-
+    private ArrayList<ArrayList<Character>> grid = new ArrayList<>();
+    private int width = 5;
+    private int height = 4;
 
 
     public Grid(){
@@ -34,5 +35,19 @@ public class Grid {
         }
 
 
+    }
+
+    public void clearGrid(){
+
+        for(int i = 0; i < height; i++){
+            for(int j = 0; j <width; j++){
+                addvalue(j, i, ' ');
+            }
+        }
+    }
+
+    public void addvalue(int x, int y, char value){
+
+        grid.get(y).set(x, value);
     }
 }

@@ -4,19 +4,26 @@
 public class World {
     private Player player;
     private Grid grid;
+    private AL al;
     public World(){
         grid = new Grid();
         player = new Player();
+        al = new AL();
     }
 
     public void update(){
+        grid.clearGrid();
+        addToGrid(player.getx(), player.gety(), player.getValue());
+        al.keyPressed();
 
+    }
+
+    public void addToGrid( int x, int y, char value){
+        grid.addvalue(player.getx(), player.gety(), player.getValue());
     }
 
     public void draw(){
-       // player.drawPlayer();
         grid.drawGrid();
+        //player.drawPlayer();
     }
-
-
 }

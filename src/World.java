@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created by emily on 18/12/2016.
  */
@@ -5,16 +7,19 @@ public class World {
     private Player player;
     private Grid grid;
     private AL al;
+
+
     public World(){
         grid = new Grid();
         player = new Player();
         al = new AL();
+
     }
 
     public void update(){
         grid.clearGrid();
+        player.ScannerTest();
         addToGrid(player.getx(), player.gety(), player.getValue());
-        al.keyPressed();
 
     }
 
@@ -26,4 +31,6 @@ public class World {
         grid.drawGrid();
         //player.drawPlayer();
     }
+
+
 }

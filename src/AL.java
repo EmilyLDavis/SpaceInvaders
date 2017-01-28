@@ -13,21 +13,9 @@ import java.awt.event.KeyEvent;
         private boolean moveU;
         private boolean moveD;
 
-        public void keyPressed(KeyEvent e) {
-            int keyCode = e.getKeyCode();
-            if (keyCode == e.VK_A) {
-                x -= 1;
-            }
-            if (keyCode == e.VK_D) {
-                x += 1;
-            }
-            if (keyCode == e.VK_W) {
-                y -= 1;
-            }
-            if (keyCode == e.VK_S) {
-                y += 1;
-            }
-        }
+
+
+
 
        /** public void keyPressed(KeyEvent e) {
             int keyCode = e.getKeyCode();

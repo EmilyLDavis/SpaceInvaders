@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class World {
     private Player player;
     private Grid grid;
-    private AL al;
+    private Enemies enemy;
     KeyEvent e;
     Scanner keyboard = new Scanner(System.in);
 
@@ -15,7 +15,7 @@ public class World {
     public World(){
         grid = new Grid();
         player = new Player();
-        al = new AL();
+        enemy = new Enemies();
 
     }
 
@@ -23,9 +23,10 @@ public class World {
         grid.clearGrid();
 
         addToGrid(player.getx(), player.gety(), player.getValue());
+        addToGrid(enemy.getx(), enemy.gety(), enemy.getValue());
+        enemy.move();
         player.ScannerTest(keyboard);
 
-        //.keyPressed(e);
 
     }
 
@@ -35,7 +36,6 @@ public class World {
 
     public void draw(){
         grid.drawGrid();
-        //player.drawPlayer();
     }
 
 

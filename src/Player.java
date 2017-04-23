@@ -1,10 +1,7 @@
 /**
  * Created by emily on 18/12/2016.
  */
-import java.awt.KeyEventDispatcher;
-import java.awt.KeyboardFocusManager;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+
 import java.util.Scanner;
 
 public class Player{
@@ -13,8 +10,8 @@ public class Player{
     private int ycoord;
 
     public Player(){
-        setx(1);
-        sety(1);
+        setx(3);
+        sety(3);
 
 
     }
@@ -91,21 +88,7 @@ public class Player{
                 keyboard.reset();
             }
 
-
-       // keyboard.close();
     }
 
-   /* public void keyPressed (KeyEvent e) {
-        int c = e.getKeyCode ();
-        if (c==KeyEvent.VK_UP) {
-            ycoord -=1;
-        } else if(c==KeyEvent.VK_DOWN) {
-            ycoord +=1;
 
-        } else if(c==KeyEvent.VK_LEFT) {
-            xcoord -=1;
-        } else if(c==KeyEvent.VK_RIGHT) {
-            xcoord +=1;
-        }
-    }*/
 }

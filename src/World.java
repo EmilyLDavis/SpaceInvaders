@@ -1,3 +1,4 @@
+import java.awt.event.KeyEvent;
 import java.util.Scanner;
 
 /**
@@ -7,6 +8,8 @@ public class World {
     private Player player;
     private Grid grid;
     private AL al;
+    KeyEvent e;
+    Scanner keyboard = new Scanner(System.in);
 
 
     public World(){
@@ -18,13 +21,16 @@ public class World {
 
     public void update(){
         grid.clearGrid();
-        player.ScannerTest();
+
         addToGrid(player.getx(), player.gety(), player.getValue());
+        player.ScannerTest(keyboard);
+
+        //.keyPressed(e);
 
     }
 
     public void addToGrid( int x, int y, char value){
-        grid.addvalue(player.getx(), player.gety(), player.getValue());
+        grid.addvalue(x, y, value);
     }
 
     public void draw(){

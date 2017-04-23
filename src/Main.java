@@ -7,7 +7,7 @@ public class Main{
         World w = new World();
         int x = 1;
 
-        for( int i =0; i <1; i++) {
+        for( int i =0; i <10; i++) {
             w.update();
             w.draw();
             try {

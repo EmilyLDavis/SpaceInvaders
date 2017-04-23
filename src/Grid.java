@@ -5,18 +5,17 @@ import java.util.ArrayList;
  */
 
 public class Grid {
-    private char empty = 'o';
+    private char empty = ' ';
     private ArrayList<ArrayList<Character>> grid = new ArrayList<>();
-    private int width = 5;
-    private int height = 4;
+    private int width = 10;
+    private int height = 5;
 
 
     public Grid(){
         makeGrid();
     }
     public void makeGrid(){
-        int width = 5;
-        int height = 4;
+
         for(int i = 0; i < height; i++){
             grid.add(new ArrayList<>());
             for(int j = 0; j <width; j++){

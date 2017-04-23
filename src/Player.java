@@ -56,13 +56,37 @@ public class Player{
                     }
                 }
                 else if("a".equals(input)){
-                    xcoord -=1;
+                    if(xcoord ==0) {
+                        System.out.println("Invalid move");
+
+                    }
+                    else{
+                        xcoord -=1;
+                    }
                 }
                 else if("s".equals(input)){
-                    ycoord +=1;
+                    if(xcoord ==10) {
+                        System.out.println("Invalid move");
+
+                    }
+                    else{
+                        ycoord +=1;
+                    }
+
                 }
                 else if("d".equals(input)){
-                    xcoord +=1;
+                    if(xcoord ==10) {
+                        System.out.println("Invalid move");
+
+                    }
+                    else{
+                        xcoord +=1;
+                    }
+
+                }
+                else {
+                    System.out.println("Invalid command");
+
                 }
                 keyboard.reset();
             }
